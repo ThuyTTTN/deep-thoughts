@@ -23,11 +23,13 @@ const ThoughtList = ({ thoughts, title }) => {
               thought on {thought.createdAt}
             </p>
             <div className="card-body">
-              <p>{thought.thoughtText}</p>
-              <p className="mb-0">
-                Reactions: {thought.reactionCount} || Click to{" "}
-                {thought.reactionCount ? "see" : "start"} the discussion!
-              </p>
+              <Link to={`/thought/${thought._id}`}>
+                <p>{thought.thoughtText}</p>
+                <p className="mb-0">
+                  Reactions: {thought.reactionCount} || Click to{" "}
+                  {thought.reactionCount ? "see" : "start"} the discussion!
+                </p>
+              </Link>
             </div>
           </div>
         ))}
