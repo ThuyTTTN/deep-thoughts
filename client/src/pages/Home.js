@@ -11,7 +11,6 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   //optional chaining: if data exists, store it in the thoughts constant we just created. If data is undefined, then save an empty array to the thoughts component.
   const thoughts = data?.thoughts || [];
-  console.log(thoughts);
 
   return (
     <main>
